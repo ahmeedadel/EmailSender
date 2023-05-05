@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="card">
+      <h3>Compose Your Message</h3>
+      <form >
+          <mat-form-field class="field" >
+              <mat-label>Subject</mat-label>
+              <input #subject id="subject"  matInput>
+          </mat-form-field>
+          <mat-form-field class="example-full-width field" >
+              <mat-label>Enter Your Message</mat-label>
+              <textarea #messageContent id="messageContent"  rows="10" matInput ></textarea>
+          </mat-form-field>
+          <div class="text-center">
+              <button  type="submit" class="btn btn-primary " (click) = "addMessage({subject:subject.value, messageContent: messageContent.value}) ">Add</button>
+              <button type="reset" class="btn btn-danger  ">Reset</button>
+          </div>
+      </form>
+  </div>
+</div>
+
